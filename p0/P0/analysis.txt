@@ -4,8 +4,10 @@ sorted(), which uses timsort. Timsort has a worst case run time of O(n*log(n)).
 Task 1: Worst case, the script runs at O(n) because it must loop through all of 
 the data once.
 
-Task 2: Worst case, the script runs at O(n) because it must loop through all of 
-the data once.
+Task 2: Worst case, the script runs at O(n*log(n)) because it must loop through all of 
+the data once, and as it is looping through the data, it must look through a dictionary
+to see if each number has already been stored in dictionary. If not, it is added to the 
+dictionary making it at worst 2 numbers longer per loop.
 
 Task 3: Task A worst case, the script runs at O(n) because it must loop through 
 all of the data once. Task B worst case, the script runs at O(n*log(n)) because 

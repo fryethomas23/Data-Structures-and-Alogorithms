@@ -19,15 +19,29 @@ Print a message:
 "<telephone number> spent the longest time, <total time> seconds, on the phone during 
 September 2016.".
 """
-longest_call_time = 0
+call_lengths = {}
+longest_caller = {
+    "number": "",
+    "call_length": 0
+}
 for entry in calls:
-    if int(entry[3]) > longest_call_time:
-        longest_call_time = int(entry[3])
-        longest_call = entry
+    if entry[0] not in call_lengths:
+        call_lengths[entry[0]] = 0
+    if entry[1] not in call_lengths:
+        call_lengths[entry[1]] = 0
+    call_lengths[entry[0]] += int(entry[3])
+    call_lengths[entry[1]] += int(entry[3])
+    
+    if longest_caller["call_length"] < call_lengths[entry[0]]:
+        longest_caller['number'] = entry[0]
+        longest_caller['call_length'] = call_lengths[entry[0]]
+    if longest_caller["call_length"] < call_lengths[entry[1]]:
+        longest_caller['number'] = entry[1]
+        longest_caller['call_length'] = call_lengths[entry[1]]    
 
 print("%s spent the longest time, %s seconds, on the phone during September 2016."%(
-    longest_call[0],
-    longest_call[3]
+    longest_caller['number'],
+    longest_caller['call_length']
 ))
 
-# O(n)
+# O(n*log(n))

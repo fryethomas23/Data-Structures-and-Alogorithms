@@ -58,7 +58,7 @@ for call in calls:
       index = call[1].index(")")
       numbers.add(call[1][1:index])
     elif call[1][5] == " ": 
-      numbers.add(call[1][:5])
+      numbers.add(call[1][:4])
     else:
       numbers.add("140")
 
