@@ -1,0 +1,17 @@
+Task 0: Wost case, the script runs at O(n*log(n)). This is because of the use of 
+sorted(), which uses timsort. Timsort has a worst case run time of O(n*log(n)).
+
+Task 1: Worst case, the script runs at O(n) because it must loop through all of 
+the data once.
+
+Task 2: Worst case, the script runs at O(n) because it must loop through all of 
+the data once.
+
+Task 3: Task A worst case, the script runs at O(n) because it must loop through 
+all of the data once. Task B worst case, the script runs at O(n*log(n)) because 
+the data must be sorted at the end, which is done by the sorted() function using
+timsort.
+
+Task 4: Worst case, the script runs at O(n^2) because at worst, every number is 
+in the data set is unique. And, every unique number must be compared to every 
+entry in the data set.
