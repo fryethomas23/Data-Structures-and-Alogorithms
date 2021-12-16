@@ -71,7 +71,7 @@ for number in sorted_numbers:
 print((
   "{:.2f} percent of calls from fixed lines in Bangalore are calls to other " 
   "fixed lines in Bangalore."
-).format(to_Bang_calls/total_calls))
+).format(to_Bang_calls/total_calls * 100))
 
 # Part A: O(n)
 # Part B: O(n*log(n))
